@@ -43,7 +43,7 @@ fetch('https://fakestoreapi.com/products')
   <h2>Product Listings</h2>
   <h2 v-for="product in {products}"></h2>
   <ul>
-      <li v-for="{product} in products">
+      <li v-for="product in products">
         {{product}}
         {{product.title}}
         {{product.description}}
