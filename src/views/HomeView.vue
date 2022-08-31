@@ -6,12 +6,12 @@ let user = "Laura"
 let choices = ["rock", "paper", "scissors"]
 let player1 = choices[Math.floor(Math.random() * 2)]
 let player2 = prompt("rock, paper, or scissors?");
-
+let products
 // Exercise - product listing
 fetch('https://fakestoreapi.com/products')
     .then(data => data.json())
     .then(data => {
-      let products = data
+      products = data
       console.log(products)
     })
 
@@ -41,7 +41,7 @@ fetch('https://fakestoreapi.com/products')
 
 <!-- exercise - product listing -->
   <h2>Product Listings</h2>
-  <h2 v-for="product in {products}"></h2>
+  <h2 v-for="product in products"></h2>
   <ul>
       <li v-for="product in products">
         {{product}}
